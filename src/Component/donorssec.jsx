@@ -6,6 +6,7 @@ import axios from "axios";
 export default function DonorSec() {
 
     const [data,setdata] = useState([])
+    const [loading,setloading] = useState(false)
 
     const getdata = async()=>{
         const res = await axios.get('https://onlinetoolscave.in/donordata').then((result,err)=>{
@@ -15,6 +16,7 @@ export default function DonorSec() {
               else{
                   setdata(result.data)
                   console.log(result.data)
+                  setloading(true)
               }
         })
     }
@@ -27,7 +29,8 @@ export default function DonorSec() {
     <div className="container">
       <div className="title">Donors</div>
       <div className="cards_container">
-      {data.map((k)=>{
+      {loading ?
+      data.map((k)=>{
           const {name,address,bloodgroup,phonenumber}=k
           return(
           <div class="cardcontainer">
@@ -60,7 +63,38 @@ export default function DonorSec() {
           </div>
         </div>
           )
-      })}
+      }):<div>
+      <div class="cardcontainer">
+       <div class="card">
+         <div class="card__header">
+           <div className="card__bloodgroup"></div>
+         </div>
+         <div class="card__body">
+           <div class="card__footer">
+             <div class="user">
+               <div class="user__info">
+                 <h5></h5>
+                 <small></small>
+               </div>
+             </div>
+           </div>
+           <div class="card__footer">
+               <div class="user">
+                 <div class="user__info">
+                   <h5></h5>
+                   <small></small>
+                 </div>
+               </div>
+             </div>
+           <h4></h4>
+           <p>
+             
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+    }
       </div>
     </div>
   );

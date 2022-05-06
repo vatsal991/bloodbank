@@ -6,6 +6,7 @@ import axios from "axios";
 export default function Request() {
 
     const [data,setdata] = useState([])
+    const [loading,setloading] = useState(false)
 
     const getdata = async()=>{
         const res = await axios.get('https://onlinetoolscave.in/requestdata').then((result,err)=>{
@@ -15,6 +16,7 @@ export default function Request() {
               else{
                   setdata(result.data)
                   console.log(result.data)
+                  setloading(true)
               }
         })
     }
@@ -27,40 +29,73 @@ export default function Request() {
     <div className="container">
       <div className="title">Request</div>
       <div className="cards_container">
-      {data.map((k)=>{
-          const {name,address,bloodgroup,phonenumber}=k
-          return(
-          <div class="cardcontainer">
-          <div class="card">
-            <div class="card__header">
-              <div className="card__bloodgroup">{bloodgroup}</div>
+      {loading ?
+      data.map((k)=>{
+        const {name,address,bloodgroup,phonenumber}=k
+        return(
+        <div class="cardcontainer">
+        <div class="card">
+          <div class="card__header">
+            <div className="card__bloodgroup">{bloodgroup}</div>
+          </div>
+          <div class="card__body">
+            <div class="card__footer">
+              <div class="user">
+                <div class="user__info">
+                  <h5>Name :</h5>
+                  <small>{name}</small>
+                </div>
+              </div>
             </div>
-            <div class="card__body">
-              <div class="card__footer">
+            <div class="card__footer">
                 <div class="user">
                   <div class="user__info">
-                    <h5>Name :</h5>
-                    <small>{name}</small>
+                    <h5>Phone :</h5>
+                    <small>{phonenumber}</small>
                   </div>
                 </div>
               </div>
-              <div class="card__footer">
-                  <div class="user">
-                    <div class="user__info">
-                      <h5>Phone :</h5>
-                      <small>{phonenumber}</small>
-                    </div>
-                  </div>
-                </div>
-              <h4>Address :</h4>
-              <p>
-                {address}
-              </p>
-            </div>
+            <h4>Address :</h4>
+            <p>
+              {address}
+            </p>
           </div>
         </div>
-          )
-      })}
+      </div>
+        )
+    }):<div>
+       <div class="cardcontainer">
+        <div class="card">
+          <div class="card__header">
+            <div className="card__bloodgroup"></div>
+          </div>
+          <div class="card__body">
+            <div class="card__footer">
+              <div class="user">
+                <div class="user__info">
+                  <h5></h5>
+                  <small></small>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+                <div class="user">
+                  <div class="user__info">
+                    <h5></h5>
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+            <h4></h4>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+      
       </div>
     </div>
   );
