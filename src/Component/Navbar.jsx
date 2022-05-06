@@ -59,7 +59,7 @@ export const DonateForm = () => {
      console.log({name,bloodgroup,address,phonenumber,id})
 
     if(name && bloodgroup && address && phonenumber){
-     const res = await fetch('http://onlinetoolscave.in/donor',{
+     const res = await fetch('https://onlinetoolscave.in/donor',{
        method:'POST',
        headers:{
          'Content-Type':'application/json'
@@ -155,7 +155,7 @@ export function RequestForm (){
      console.log({name,bloodgroup,address,phonenumber,id})
 
      if(name && bloodgroup && address && phonenumber){
-     const res = await fetch('http://onlinetoolscave.in/request',{
+     const res = await fetch('https://onlinetoolscave.in/request',{
        method:'POST',
        headers:{
          'Content-Type':'application/json'
@@ -251,7 +251,7 @@ export const AddBankForm = () => {
      console.log({name,description,address,phonenumber,id})
 
      if(name && address && phonenumber){
-     const res = await fetch('http://onlinetoolscave.in/bloodbank',{
+     const res = await fetch('https://onlinetoolscave.in/bloodbank',{
        method:'POST',
        headers:{
          'Content-Type':'application/json'

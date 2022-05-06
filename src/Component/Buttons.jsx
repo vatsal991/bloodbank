@@ -14,17 +14,17 @@ export const Buttons=()=> {
 
 
  const getDonor = async()=>{
-   const res = await axios.get('http://onlinetoolscave.in/donorcount').then((resp)=>{
+   const res = await axios.get('https://onlinetoolscave.in/donorcount').then((resp)=>{
        setdonorcount(resp.data[0]['COUNT(id)'])
     })
  }  
  const getRequest = async()=>{
-    const res = await axios.get('http://onlinetoolscave.in/requestcount').then((resp)=>{
+    const res = await axios.get('https://onlinetoolscave.in/requestcount').then((resp)=>{
         setrequestcount(resp.data[0]['COUNT(*)'])
      })
   }  
   const getBank = async()=>{
-    const res = await axios.get('http://onlinetoolscave.in/bloodbankcount').then((resp)=>{
+    const res = await axios.get('https://onlinetoolscave.in/bloodbankcount').then((resp)=>{
         setbankcount(resp.data[0]['COUNT(*)'])
      })
   }   

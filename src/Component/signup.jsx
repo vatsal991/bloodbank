@@ -45,7 +45,7 @@ export default function SignUp() {
     e.preventDefault()
 
      if(email && password && name && last){
-     const res = await fetch('http://onlinetoolscave.in/register',{
+     const res = await fetch('https://onlinetoolscave.in/register',{
        method:'POST',
        headers:{
          'Content-Type':'application/json'
