@@ -66,8 +66,8 @@ export default function Login() {
        }
        else{
          window.alert("Login Successful !")
-         Cookies.set('login', 'true')
-         Cookies.set('id', `${data[0].id}`)
+         Cookies.set('login', 'true',{ expires: 7 })
+         Cookies.set('id', `${data[0].id}`,{ expires: 7 })
          console.log()
          Navigate('/')
        }
