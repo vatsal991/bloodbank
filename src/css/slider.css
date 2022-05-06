@@ -1,22 +1,18 @@
 .SLiderContainer{
-    position: relative;
+    border-radius: 10px;
+    height: 50vh;
+    width: 100%;
+    background-image: url(../images/5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.slidertext{
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     flex-direction: column;
-    border-radius: 10px;
-}
-.SliderImage{
-    height: 50vh;
-    width: 100%;
-    border-radius: 10px;
-}
-
-.SliderText{
-    position: absolute;
-    bottom: 0;
     color: white;
-    margin: auto;
-    width: 100%;
-    text-align: center;
 }

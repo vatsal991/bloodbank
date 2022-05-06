@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import '../css/slider.css'
-import image from '../images/1.jpg'
-import image2 from '../images/2.png'
+
 
 export default class SliderComp extends Component {
   render() {
@@ -19,28 +18,22 @@ export default class SliderComp extends Component {
       <div style={{height:'50vh',width:'90%',margin:'auto',marginTop:'20px',zIndex:'10'}}>
         <Slider {...settings}>
           <div className="SLiderContainer">
-              <img className="SliderImage" src={image} />
-              <h4 className="SliderText">This Is Test</h4>
+            <div className="slidertext">
+              <h4 className="SliderText">Save Lives !</h4>
+              <h6>Blood Donation Is A Small Act Of Kindness That Does Great And Big Wonders.</h6>
+              </div>
           </div>
           <div className="SLiderContainer">
-              <img className="SliderImage" src={image2} />
-              <h4 className="SliderText">This Is Test</h4>
+            <div className="slidertext">
+              <h4 className="SliderText">Help To Someone !</h4>
+              <h6>Blood Donation Costs You Nothing, But It Can Mean The World To Someone In Need.</h6>
+              </div>
           </div>
           <div className="SLiderContainer">
-              <img className="SliderImage" src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?k=20&m=517188688&s=612x612&w=0&h=i38qBm2P-6V4vZVEaMy_TaTEaoCMkYhvLCysE7yJQ5Q=" />
-              <h4 className="SliderText">This Is Test</h4>
-          </div>
-          <div className="SLiderContainer">
-              <img className="SliderImage" src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?k=20&m=517188688&s=612x612&w=0&h=i38qBm2P-6V4vZVEaMy_TaTEaoCMkYhvLCysE7yJQ5Q=" />
-              <h4 className="SliderText">This Is Test</h4>
-          </div>
-          <div className="SLiderContainer">
-              <img className="SliderImage" src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?k=20&m=517188688&s=612x612&w=0&h=i38qBm2P-6V4vZVEaMy_TaTEaoCMkYhvLCysE7yJQ5Q=" />
-              <h4 className="SliderText">This Is Test</h4>
-          </div>
-          <div className="SLiderContainer">
-              <img className="SliderImage" src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?k=20&m=517188688&s=612x612&w=0&h=i38qBm2P-6V4vZVEaMy_TaTEaoCMkYhvLCysE7yJQ5Q=" />
-              <h4 className="SliderText">This Is Test</h4>
+            <div className="slidertext">
+              <h4 className="SliderText">Make Other Happy !</h4>
+              <h6>Donate Blood Today So That No One Ever Has To Suffer From A Lack Of Blood.</h6>
+              </div>
           </div>
         </Slider>
       </div>

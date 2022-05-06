@@ -9,6 +9,27 @@
   align-items: center;
 }
 
+.Logo{
+  color: #EA062B;
+  text-decoration: none;
+  font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+
+}
+.NavButton{
+  margin: 5px;
+  border: 2px solid #EA062B;
+  border-radius: 3px;
+  padding: 3px;
+  background-color: white;
+  font-weight: 600;
+  color: #333333;
+}
+.Logo:hover{
+  color: #EA062B;
+}
 .ButtonCard {
   height: 200px;
   width: 200px;
@@ -62,7 +83,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 0 24px;
   text-align: center;
   text-transform: uppercase;
-  background-color: #53A0E9;
+  background-color: #EA062B;
   padding:5px 10px 5px 10px;
   border-radius: 30px;
 }
@@ -273,42 +294,42 @@ img {
 
 
 .card__bloodgroup{
-  background-color: #fbeecb;
+  background-color: #EA062B;
   height: 100px;
   width: 100%;
   font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  color: #333333;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Donorcard__bloodgroup{
-  background-color: #ffbfd4;
+  background-color: #EA062B;
   height: 100px;
   width: 100%;
   font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  color: #333333;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Bankcard__bloodgroup{
-  background-color: #CAF4EA;
+  background-color: #EA062B;
   height: 100px;
   width: 100%;
   font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  color: #333333;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
